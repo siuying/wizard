@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "wizard", :action => "index"
   
   map.connect 'wizard/:context_id', :controller => "wizard", :action => "wizard"
+  map.connect 'guess/:context_id', :controller => "guess", :action => "guess"
   
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'

@@ -1,0 +1,2 @@
+module GuessHelper
+end

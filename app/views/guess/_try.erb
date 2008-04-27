@@ -1,0 +1,10 @@
+<h1>Guess the number! (<%=@min%>-<%=@max%>)</h1>
+
+<div><%= @msg %></div>
+
+<% form_tag :action => :guess, :context_id => @context_id do %>
+	<div>
+	<%= text_field_tag 'guess' %>
+	<%= submit_tag 'Guess' %>
+	</div>
+<% end %>
