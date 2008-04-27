@@ -13,10 +13,10 @@ class GuessController < ApplicationController
       logger.debug "answer=#{@answer}, guess=#{@guess}"
       if @guess > @answer
         @msg = "The number is smaller than #{@guess}, try again!"
-        @max = @guess if @max > @guess
+        @max = @guess - 1 if @max > @guess
       elsif @guess < @answer
         @msg = "The number is larger than #{@guess}, try again!"        
-        @min = @guess if @min < @guess
+        @min = @guess + 1 if @min < @guess
       else
         break
       end
