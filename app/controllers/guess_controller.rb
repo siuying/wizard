@@ -12,11 +12,11 @@ class GuessController < ApplicationController
       @guess = params[:guess].to_i
       logger.debug "answer=#{@answer}, guess=#{@guess}"
       if @guess > @answer
-        @msg = "The number is smaller than #{@guess}"
-        @max = @guess
+        @msg = "The number is smaller than #{@guess}, try again!"
+        @max = @guess if @max > @guess
       elsif @guess < @answer
-        @msg = "The number is larger than #{@guess}"        
-        @min = @guess
+        @msg = "The number is larger than #{@guess}, try again!"        
+        @min = @guess if @min < @guess
       else
         break
       end
