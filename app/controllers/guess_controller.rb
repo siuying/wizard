@@ -25,7 +25,6 @@ class GuessController < ApplicationController
     end until @guess == @answer
 
     render :partial => 'done'
-    part3 
   end
 
   def index

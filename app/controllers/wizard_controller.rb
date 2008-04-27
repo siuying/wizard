@@ -11,7 +11,6 @@ class WizardController < ApplicationController
     
     @msg = params[:msg]
     render :partial => 'part_3'
-    part3 
   end
 
   def index
