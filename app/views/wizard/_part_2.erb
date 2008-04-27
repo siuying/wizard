@@ -1,0 +1,6 @@
+<h3>This is second part</h3>
+<div>Your Name: <%=h @name %></div>
+<% form_tag :action => :wizard, :context_id => @context_id do %>
+	<div>Your Message: <%= text_field_tag 'msg' %></div>
+	<div><%= submit_tag 'Next' %></div>
+<% end %>
